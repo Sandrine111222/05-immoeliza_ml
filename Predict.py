@@ -2,6 +2,7 @@ import pandas as pd
 import joblib
 
 # Load the trained pipeline
+
 model = joblib.load("best_house_price_model.pkl")
 
 def predict_custom_house(model, feature_dict):
@@ -11,7 +12,6 @@ def predict_custom_house(model, feature_dict):
 
 
 # Example input (replace values)
-
 
 new_house = {
     "area": 120,
@@ -25,4 +25,3 @@ new_house = {
 
 price = predict_custom_house(model, new_house)
 print(f"Estimated Price: {price:,.2f}")
-
