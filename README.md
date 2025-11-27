@@ -14,12 +14,9 @@ The goal is to uncover market trends, identify price drivers, and build predicti
 - [Dataset](#dataset)  
 - [Creating Pipeline](#creating-pipeline)  
 - [Explore Machine Learning Models](#explore-machine-learning-models)  
-- [Evaluate the Performance of a Model](#evaluate-the-performance-of-a-model)  
-- [Key Insights](#key-insights)  
-- [Project Structure](#project-structure)  
-- [Requirements](#requirements)  
-- [How to Run](#how-to-run)  
-- [The Team](#the-team)
+- [Evaluate the Performance of a Model](#evaluate-the-performance-of-a-model)   
+- [Project Structure](#project-structure)   
+
 
 ---
 
@@ -52,15 +49,13 @@ The cleaned dataset contains:
 
 - **15,000+ property listings**  
 - **17 features**, including:  
-  - Price  
   - Living area  
   - Build year  
   - Number of rooms  
   - Number of facades  
   - Property type  
   - Province & region  
-  - Price per square meter  
-
+  
 ---
 
 # Creating Pipeline
@@ -102,31 +97,40 @@ The cleaned dataset contains:
 
 # Evaluate the Performance of a Model
 
-(Additional metrics or plots will be added later.)
+| Model                    | RMSE        | MAE         | R²     |
+| ------------------------ | ----------- | ----------- | ------ |
+| **Linear Regression**    | 176,555.453 | 103,023.992 | 0.511  |
+| **Decision Tree**        | 181,462.994 | 98,865.731  | 0.483  |
+| **Random Forest**        | 147,918.026 | 73,414.115  | 0.657  |
+| **XGBoost**              | 146,005.958 | 76,646.448  | 0.665  |
+
+Overfitting might be occurring.
 
 ---
 
-# 🧱 Project Structure
+
+# Project Structure
 
 ```bash
-IMMO_EELIZA_TEAM_HORSES_ANALYSIS/
+IMMOELIZA_ML/
 │
-├── data/
-│   ├── raw/
-│   └── cleaned/
+├── Cleaning
 │
-├── analysis/
-│   └── Hamideh/
-│        └── analysis.ipynb
+├── Predict.py
 │
-├── output/
-│   ├── images.png
-│   ├── overview.png
+├── test.ipynb
+|
+|── house.py
+|
+├── test.py
 │
-├── src/
-│   ├── cleaning.py
-│   ├── analysis.py
-│   └── visualization.py
-│
-├── README.md
-└── requirements.txt
+└── README.md
+
+
+---
+
+
+This project is part of AI & Data Science Bootcamp training at **`</becode>`** and it written by :
+
+- Sandrine Herbelet  [LinkedIn](https://www.linkedin.com/in/) | [Github](https://github.com/Sandrine111222)
+
