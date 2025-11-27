@@ -10,9 +10,8 @@ def predict_custom_house(model, feature_dict):
     return predicted_price
 
 
-# ================================
 # Example input (replace values)
-# ================================
+
 
 new_house = {
     "area": 120,

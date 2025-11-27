@@ -153,17 +153,24 @@ for name, model in models.items():
     print(f"Best Parameters for {name}:\n{search.best_params_}\n")
 
 
-def evaluate(model, X_test, y_test, name):
-    preds = model.predict(X_test)
-    rmse = np.sqrt(mean_squared_error(y_test, preds))
-    mae = mean_absolute_error(y_test, preds)
-    r2 = r2_score(y_test, preds)
+
+def evaluate(model, X_train, y_train, X_test, y_test, name):
+    # Predictions
+    train_preds = model.predict(X_train)
+    test_preds  = model.predict(X_test)
+
+    # Metrics
+    rmse_test = np.sqrt(mean_squared_error(y_test, test_preds))
+    mae_test  = mean_absolute_error(y_test, test_preds)
+
+    r2_train = r2_score(y_train, train_preds)
+    r2_test  = r2_score(y_test, test_preds)
 
     print(f"\n===== {name} =====")
-    print(f"RMSE: {rmse:.3f}")
-    print(f"MAE:  {mae:.3f}")
-    print(f"R²:   {r2:.3f}")
-
+    print(f"RMSE (test): {rmse_test:.3f}")
+    print(f"MAE  (test): {mae_test:.3f}")
+    print(f"R²   (train): {r2_train:.3f}")
+    print(f"R²   (test):  {r2_test:.3f}")
     return preds
 
 
