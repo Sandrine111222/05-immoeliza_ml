@@ -104,7 +104,7 @@ The cleaned dataset contains:
 | **Random Forest**        | 147,918.026 | 73,414.115  | 0.657  |
 | **XGBoost**              | 146,005.958 | 76,646.448  | 0.665  |
 
-Overfitting might be occurring (R² train values are too high).
+Overfitting might be occurring (R² train values are too highcompared to R² test).
 
 ---
 
