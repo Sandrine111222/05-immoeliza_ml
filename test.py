@@ -46,7 +46,6 @@ def load_data(file_path, target="price"):
 
 
 
-
 # PREPROCESSING PIPELINE
 
 def make_preprocessor(X):
